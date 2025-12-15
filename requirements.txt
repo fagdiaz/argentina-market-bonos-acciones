@@ -1,0 +1,7 @@
+requests
+pandas
+gspread
+gspread-dataframe
+websocket-client
+google-auth 
+python-dotenv

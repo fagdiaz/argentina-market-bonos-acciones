@@ -1,0 +1,14 @@
+.env
+*_key.json
+*.json
+!package.json
+!tsconfig.json
+# ^ (esto es para otros stacks; si no te gusta, sacalo)
+
+.venv/
+__pycache__/
+*.pyc
+.cache/
+logs/
+*.log
+*.xlsx
