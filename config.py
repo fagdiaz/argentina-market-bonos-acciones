@@ -59,8 +59,3 @@ MERCADO_EVERY_MIN = int(_get_env_var_optional("MERCADO_EVERY_MIN", "15"))
 SHEET_BONOS_ID = _get_env_var("SHEET_BONOS_ID")
 SHEET_BONOS_TAB = _get_env_var_optional("SHEET_BONOS_TAB", "BONOS")
 SHEET_CLEAR = _get_env_var_optional("SHEET_CLEAR", "false").lower() in ("1", "true", "yes", "y")
-
-
-SHEET_BONOS_ID = _get_env_var("SHEET_BONOS_ID")
-SHEET_BONOS_TAB = _get_env_var_optional("SHEET_BONOS_TAB", "BONOS")
-SHEET_CLEAR = _get_env_var_optional("SHEET_CLEAR", "false").strip().lower() in ("1","true","yes","y")

@@ -88,7 +88,7 @@ def get_iol_token() -> dict:
 # Cache de paneles
 # --------------------
 def _load_panel_cache(ttl_hours: int = 24) -> str:
-    """Devuelve panel de acciones cacheado si no está vencido."""
+    """Devuelve panel de acciones cacheado si no esta vencido."""
     try:
         if not CACHE_ACC_PANEL.exists():
             return ""

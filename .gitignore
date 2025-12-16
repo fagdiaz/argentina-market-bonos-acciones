@@ -12,3 +12,5 @@ __pycache__/
 logs/
 *.log
 *.xlsx
+mercado_log.txt
+mercado_scheduler.log
