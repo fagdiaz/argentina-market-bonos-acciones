@@ -1,6 +1,6 @@
-﻿# Puesta en marcha en Windows
+# Puesta en marcha en Windows
 
-Flujo recomendado: Task Scheduler llama a `run_startup.bat`, que usa el venv `.venv` y ejecuta el scheduler `run_mercado.py` (core en `mercado.py`).
+Flujo recomendado: Task Scheduler llama a `run_startup.bat`, que usa el venv `.venv` y ejecuta el scheduler `scheduler.py` (core en `mercado.py`).
 
 ## Prerrequisitos
 - Python 3.6+ instalado (usa `python` o `py` solo para crear el venv).
@@ -34,7 +34,7 @@ LOG_LEVEL=INFO
 
 ## Script de arranque (unico entrypoint)
 - Usa solo `run_startup.bat` en el root.
-- Hace `cd` al repo, crea `logs/`, verifica `.venv\Scripts\python.exe`, instala deps si falta gspread y ejecuta `run_mercado.py` con ese Python. Todo loguea en `logs/startup.log`.
+- Hace `cd` al repo, crea `logs/`, verifica `.venv\Scripts\python.exe`, instala deps si falta gspread y ejecuta `scheduler.py` con ese Python. Todo loguea en `logs/startup.log`.
 
 ## Registrar tarea en Task Scheduler
 1. Task Scheduler -> Create Task.
@@ -47,7 +47,7 @@ LOG_LEVEL=INFO
 6. Condiciones: desactiva "Start the task only if the computer is on AC power" si quieres que corra siempre.
 
 ## Logs
-- `run_mercado.py` escribe en `mercado_scheduler.log`.
+- `scheduler.py` escribe en `mercado_scheduler.log`.
 - `run_startup.bat` redirige stdout/stderr a `logs/startup.log`.
 - `logs/` esta ignorado en git; revisa esos archivos para diagnosticar.
 

@@ -35,9 +35,9 @@ if errorlevel 1 (
 )
 
 REM Ejecutar scheduler (deja logs dentro del mismo archivo)
-echo [%DATE% %TIME%] Ejecutando run_mercado.py... >> "%LOGDIR%\startup.log"
-"%VENV_PY%" run_mercado.py >> "%LOGDIR%\startup.log" 2>&1
+echo [%DATE% %TIME%] Ejecutando scheduler.py... >> "%LOGDIR%\startup.log"
+"%VENV_PY%" scheduler.py >> "%LOGDIR%\startup.log" 2>&1
 
 REM Si termina (no deberia, salvo error), lo registramos
-echo [%DATE% %TIME%] FIN run_mercado.py (salio del loop o fallo). >> "%LOGDIR%\startup.log"
+echo [%DATE% %TIME%] FIN scheduler.py (salio del loop o fallo). >> "%LOGDIR%\startup.log"
 exit /b 0
